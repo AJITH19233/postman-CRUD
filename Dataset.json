@@ -1,0 +1,57 @@
+[
+  {
+    "Name of Hospital": "ABC MEDICAL INSTITUTE",
+    "Patient Count": 100,
+    "Location": "TVM"
+  },
+  {
+    "Name of Hospital": "XYZ MEDICAL INSTITUTE",
+    "Patient Count": 300,
+    "Location": "PTA"
+  },
+  {
+    "Name of Hospital": "AVC MEDICAL INSTITUTE",
+    "Patient Count": 200,
+    "Location": "KLM"
+  },
+  {
+    "Name of Hospital": "AZ MEDICAL INSTITUTE",
+    "Patient Count": 500,
+    "Location": "KTTYM"
+  },
+  {
+    "Name of Hospital": "AR MEDICAL INSTITUTE",
+    "Patient Count": 150,
+    "Location": "ALAP"
+  },
+  {
+    "Name of Hospital": "ABC MEDICAL INSTITUTE",
+    "Patient Count": 100,
+    "Location": "TVM"
+  },
+  {
+    "Name of Hospital": "ABC MEDICAL INSTITUTE",
+    "Patient Count": 100,
+    "Location": "TVM"
+  },
+  {
+    "Name of Hospital": "ABC MEDICAL INSTITUTE",
+    "Patient Count": 100,
+    "Location": "TVM"
+  },
+  {},
+  [
+    {
+      "Name of Hospital": "NSM MEDICAL INSTITUTE",
+      "Patient Count": 100,
+      "Location": "PLKD"
+    }
+  ],
+  [
+    {
+      "Name of Hospital": "ACF MEDICAL INSTITUTE",
+      "Patient Count": 100,
+      "Location": "KKKLM"
+    }
+  ]
+]
