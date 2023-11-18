@@ -25,21 +25,36 @@ router.post('/add', (req, res) => {
   writeData(hospitals);
   res.send("data Posted");
 });
-router.put('/update/:id', (req, res) => {
-  const hospitals = readData();
-  const id = req.params.id;
-  const updatedHospital = req.body;
+router.put('/update/:name', (req, res) => {
+  const data = readData();
+  const itemId = req.params.name;
+  const updatedItem = req.body;
 
-  hospitals[id] = updatedHospital;
-  writeData(hospitals);
-  res.send("Updated Successful");
+  const index = data.findIndex((item) => item.name === itemId);
+
+  if (index !== -1) {
+    data[index] = { ...data[index], ...updatedItem };
+    writeData(data);
+    res.json(data[index]);
+  } else {
+    res.status(404).json({ error: 'Item not found' });
+  }
 });
-router.delete('/deleted/:id', (req, res) => {
-  const hospitals = readData();
-  const id = req.params.id;
-  const deletedHospital = hospitals.splice(id, 1)[0];
-  writeData(hospitals);
-  res.send("Deleted Successfully")
+router.put('/delete/:name', (req, res) => {
+  const data = readData();
+  const itemId = req.params.name;
+  const updatedItem = req.body;
+
+  const index = data.findIndex((item) => item.name === itemId);
+
+  if (index !== -1) {
+    data[index] = { ...data[index], ...updatedItem };
+    writeData(data);
+    res.json(data[index]);
+  } else {
+    res.status(404).json({ error: 'Item not found' });
+  }
 });
+
 
   module.exports=router;
