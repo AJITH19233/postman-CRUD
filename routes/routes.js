@@ -40,17 +40,15 @@ router.put('/update/:name', (req, res) => {
     res.status(404).json({ error: 'Item not found' });
   }
 });
-router.put('/delete/:name', (req, res) => {
+router.delete('/deleted/:name', (req, res) => {
   const data = readData();
   const itemId = req.params.name;
-  const updatedItem = req.body;
 
-  const index = data.findIndex((item) => item.name === itemId);
+  const filteredData = data.filter((item) => item.name !== itemId);
 
-  if (index !== -1) {
-    data[index] = { ...data[index], ...updatedItem };
-    writeData(data);
-    res.json(data[index]);
+  if (filteredData.length < data.length) {
+    writeData(filteredData);
+    res.json({ success: true });
   } else {
     res.status(404).json({ error: 'Item not found' });
   }
