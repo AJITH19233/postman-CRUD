@@ -18,14 +18,14 @@ router.get('/hospitals', (req, res) => {
   const hospitals = readData();
   res.json(hospitals);
 });
-router.post('/add', (req, res) => {
+router.post('/hospitals', (req, res) => {
   const hospitals = readData();
   const newHospital = req.body;
   hospitals.push(newHospital);
   writeData(hospitals);
   res.send("data Posted");
 });
-router.put('/update/:name', (req, res) => {
+router.put('/hospitals/:name', (req, res) => {
   const data = readData();
   const itemId = req.params.name;
   const updatedItem = req.body;
@@ -40,7 +40,7 @@ router.put('/update/:name', (req, res) => {
     res.status(404).json({ error: 'Item not found' });
   }
 });
-router.delete('/deleted/:name', (req, res) => {
+router.delete('/hospitals/:name', (req, res) => {
   const data = readData();
   const itemId = req.params.name;
 
